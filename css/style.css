@@ -1,0 +1,135 @@
+:root{--claret:#4a1424;--claret-2:#6b2037;--ivory:#faf6f0;--tint:#f1e9dd;--brass:#a8832f;--ink:#2a1a1e;--muted:#6f6166;--line:#ddd0bf;--serif:"Cormorant Garamond",Georgia,serif;--sans:"Instrument Sans",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font:17px/1.65 var(--sans);color:var(--ink);background:var(--ivory)}
+a{color:var(--claret-2)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.narrow{max-width:800px}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;color:var(--claret)}
+h1{font-size:clamp(2.6rem,6vw,4.6rem);font-weight:700;max-width:14ch}
+h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:28px}
+h3{font-size:1.5rem;margin-bottom:10px}
+p+p{margin-top:12px}
+.muted{color:var(--muted)}
+.small{font-size:.9rem;letter-spacing:.04em;color:#d3b46a;margin-bottom:16px}
+
+.site-header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;background:rgba(250,246,240,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.brand{font:700 1.35rem var(--serif);color:var(--claret);text-decoration:none}
+.brand span{font-weight:500;color:var(--brass)}
+nav{display:flex;gap:22px}
+nav a{text-decoration:none;color:var(--ink);font-size:.95rem;font-weight:500}
+nav a:hover{color:var(--claret-2)}
+.nav-toggle{display:none;background:none;border:0;padding:8px;cursor:pointer}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--claret);margin:5px 0}
+
+.btn{display:inline-block;padding:13px 28px;background:var(--claret);color:#fff;text-decoration:none;font-weight:600;border:2px solid var(--claret);border-radius:2px;cursor:pointer;font-size:1rem;font-family:var(--sans);transition:background .2s}
+.btn:hover{background:var(--claret-2);border-color:var(--claret-2)}
+.btn.ghost{background:none;color:var(--claret)}
+.btn.ghost:hover{background:var(--claret);color:#fff}
+.btn.light{background:var(--ivory);color:var(--claret);border-color:var(--ivory)}
+.btn.light:hover{background:var(--brass);border-color:var(--brass);color:#fff}
+.hero .btn{background:var(--ivory);color:var(--claret);border-color:var(--ivory)}
+.hero .btn:hover{background:var(--brass);border-color:var(--brass);color:#fff}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+
+.hero{background:linear-gradient(105deg,rgba(40,8,20,.94) 40%,rgba(74,20,36,.55)),url(../images/hero.jpg) center/cover,var(--claret);color:#fff;padding:clamp(80px,14vw,170px) 0}
+.hero h1{color:#fff;margin-bottom:20px}
+.hero .lead{max-width:46ch;font-size:1.2rem;margin-bottom:32px;color:#eadfd2}
+
+.section{padding:88px 0}
+.tint{background:var(--tint)}
+.dark{background:var(--claret);color:#f1e6da}
+.dark h2{color:#fff}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split+.split{margin-top:72px}
+
+.img{background:var(--c,#7a3a4a) center/cover no-repeat;aspect-ratio:2/1;margin-bottom:20px;border-radius:2px}
+.img.tall{aspect-ratio:17/10;margin:0}
+.img-1{background-image:url(../images/about-1.jpg);--c:#5b1b2e}
+.img-2{background-image:url(../images/about-2.jpg);--c:#7a2c42}
+.img-3{background-image:url(../images/about-3.jpg);--c:#8b3d52}
+.img-4{background-image:url(../images/share-price.jpg);--c:#6b2037}
+.img-5{background-image:url(../images/reports.jpg);--c:#8a6a2a}
+.img-6{background-image:url(../images/james-pala.jpg);--c:#5b1b2e}
+.wines .img{background-size:contain;background-color:#fff;border:1px solid var(--line)}
+.w1{background-image:url(../images/lafite.png)}.w2{background-image:url(../images/margaux.png)}.w3{background-image:url(../images/petrus.png)}
+.w4{background-image:url(../images/latour.png)}.w5{background-image:url(../images/mouton.png)}.w6{background-image:url(../images/haut-brion.png)}
+.wines h3{font-size:1.35rem;margin-bottom:4px}
+.wines p{color:var(--muted);font-size:.95rem}
+.person{grid-template-columns:5fr 6fr;margin-top:40px}
+.gap{margin-top:32px}
+
+.reasons{list-style:none;counter-reset:r;display:grid;grid-template-columns:1fr 1fr;gap:20px 56px;margin-bottom:28px}
+.reasons li{counter-increment:r;position:relative;padding-left:48px}
+.reasons li::before{content:counter(r);position:absolute;left:0;top:-2px;font:600 1.8rem var(--serif);color:#d3b46a}
+.dark .note{margin:12px 0 28px;font-weight:600;color:#fff}
+
+.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{cursor:pointer;font:600 1.3rem/1.3 var(--serif);color:var(--claret);list-style:none;display:flex;justify-content:space-between;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--brass);font-size:1.6rem;line-height:1}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{margin-top:12px;max-width:68ch}
+
+form{display:grid;gap:18px}
+label{font-weight:500;font-size:.95rem;display:grid;gap:6px;position:relative}
+label .muted{position:absolute;right:0;top:0;font-size:.85rem}
+input,textarea{font:inherit;padding:12px 14px;border:1px solid var(--line);background:#fff;border-radius:2px;width:100%}
+input:focus,textarea:focus{border-color:var(--claret);outline:2px solid var(--brass)}
+.hp{position:absolute;left:-9999px}
+#form-status{font-weight:500}
+#form-status.ok{color:#2e6b3a}#form-status.err{color:#a02323}
+.note-dark{margin-top:28px;color:var(--muted);font-size:.95rem}
+.contact-info h3{margin-top:24px}.contact-info h3:first-child{margin-top:0}
+.social{display:flex;flex-wrap:wrap;gap:6px 18px}
+.lfsa{margin-top:24px;height:60px;width:auto}
+
+footer{background:var(--claret);color:#d9c9bd;text-align:center;padding:28px 24px;font-size:.9rem}
+
+@media(max-width:860px){
+  .grid3,.grid2,.split,.person,.reasons{grid-template-columns:1fr}
+  .grid2{gap:48px}.section{padding:64px 0}
+  .nav-toggle{display:block}
+  nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--ivory);border-bottom:1px solid var(--line);display:none}
+  nav.open{display:flex}
+  nav a{padding:14px 24px;border-top:1px solid var(--line)}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+
+/* Wines section: card with soft shadow and hover pop-up */
+.wines article{
+  background:#fff;
+  padding:16px 16px 20px;
+  border-radius:6px;
+  box-shadow:0 2px 8px rgba(74,20,36,.08);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.wines article:hover,
+.wines article:focus-within{
+  transform:translateY(-8px);
+  box-shadow:0 16px 32px rgba(74,20,36,.18);
+}
+.wines .img{
+  border:0;
+  margin-bottom:16px;
+}
+
+/* About us: 3 cards with soft shadow only */
+#about article{
+  background:#fff;
+  border-radius:6px;
+  overflow:hidden;
+  padding-bottom:28px;
+  box-shadow:0 4px 16px rgba(74,20,36,.10);
+}
+#about article .img{
+  margin:0 0 22px;
+  border-radius:0;
+}
+#about article h3,
+#about article p{
+  padding:0 24px;
+}
